@@ -9,3 +9,25 @@ jelly/Cargo.lock
 **/*.rs.bk
 
 .env
+assets/
+src/img/bootstrap-icons-1.7.2/.browserslistrc
+src/img/bootstrap-icons-1.7.2/.editorconfig
+src/img/bootstrap-icons-1.7.2/.eslintignore
+src/img/bootstrap-icons-1.7.2/.eslintrc.json
+src/img/bootstrap-icons-1.7.2/.fantasticonrc.js
+src/img/bootstrap-icons-1.7.2/.gitattributes
+src/img/bootstrap-icons-1.7.2/.github/
+src/img/bootstrap-icons-1.7.2/.gitignore
+src/img/bootstrap-icons-1.7.2/.stylelintrc
+src/img/bootstrap-icons-1.7.2/LICENSE.md
+src/img/bootstrap-icons-1.7.2/README.md
+src/img/bootstrap-icons-1.7.2/bootstrap-icons.svg
+src/img/bootstrap-icons-1.7.2/build/
+src/img/bootstrap-icons-1.7.2/composer.json
+src/img/bootstrap-icons-1.7.2/config.yml
+src/img/bootstrap-icons-1.7.2/docs/
+src/img/bootstrap-icons-1.7.2/font/
+src/img/bootstrap-icons-1.7.2/package-lock.json
+src/img/bootstrap-icons-1.7.2/package.json
+src/img/bootstrap-icons-1.7.2/svg-sprite.json
+src/img/bootstrap-icons-1.7.2/svgo.config.js
