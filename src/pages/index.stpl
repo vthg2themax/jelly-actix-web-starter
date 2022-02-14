@@ -1,0 +1,104 @@
+<!-- The top and bottom include are required to be used for each page-->
+<% include!("_afore_body.stpl"); %>
+
+<!--
+<div class="container">
+    <main role="main" class="pb-3">
+      <% for msg in &messages { %>
+        <div><%= msg %></div>
+      <% } %>            
+    </main>
+</div>
+-->
+
+<div class="flex flex-wrap">
+  <div class="flex w-full md:w-4/12 flex-col">
+    <!-- Embla -->
+    <div class="embla w-full px-10 py-4">
+      <div class="embla__viewport">
+        <div class="embla__container ml-[-2.5rem]">
+          <div class="embla__slide pl-10">
+            <div class="embla__slide__inner">
+              <img class="embla__slide__img" src="/assets/img/1.jpg" />
+            </div>
+          </div>
+          <div class="embla__slide pl-10">
+            <div class="embla__slide__inner">
+              <img class="embla__slide__img" src="/assets/img/2.jpg" />
+            </div>
+          </div>
+          <div class="embla__slide pl-10">
+            <div class="embla__slide__inner">
+              <img class="embla__slide__img" src="/assets/img/3.jpg" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <button class="embla__button embla__button--prev" type="button">
+        <svg
+          class="embla__button__svg"
+          viewBox="137.718 -1.001 366.563 643.999"
+        >
+          <path
+            d="M428.36 12.5c16.67-16.67 43.76-16.67 60.42 0 16.67 16.67 16.67 43.76 0 60.42L241.7 320c148.25 148.24 230.61 230.6 247.08 247.08 16.67 16.66 16.67 43.75 0 60.42-16.67 16.66-43.76 16.67-60.42 0-27.72-27.71-249.45-249.37-277.16-277.08a42.308 42.308 0 0 1-12.48-30.34c0-11.1 4.1-22.05 12.48-30.42C206.63 234.23 400.64 40.21 428.36 12.5z"
+          ></path>
+        </svg>
+      </button>
+      <button class="embla__button embla__button--next" type="button">
+        <svg class="embla__button__svg" viewBox="0 0 238.003 238.003">
+          <path
+            d="M181.776 107.719L78.705 4.648c-6.198-6.198-16.273-6.198-22.47 0s-6.198 16.273 0 22.47l91.883 91.883-91.883 91.883c-6.198 6.198-6.198 16.273 0 22.47s16.273 6.198 22.47 0l103.071-103.039a15.741 15.741 0 0 0 4.64-11.283c0-4.13-1.526-8.199-4.64-11.313z"
+          ></path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="">
+      <div style='min-height:25vh;' class="ltfl_bookdisplay_widget" id="ltfl_widget_u_76753ecb"></div>
+      
+      <script type="text/javascript" src="https://unbound.syndetics.com/syndeticsunbound/connector/initiator.php?a_id=455"></script>
+    </div>
+  </div>
+
+  <div class="flex flex-wrap w-full content-start md:w-6/12 md:justify-between">
+
+    <a class="flex flex-col justify-center items-center border-solid w-1/2 h-[23.3vh] bg-stone-300 m-4 p-4 rounded-md 
+              md:w-[28.6%] transition ease-in-out delay-150 hover:bg-stone-500 hover:-translate-y-1 hover:scale-110 duration-300" 
+              href="" target="_blank">
+      <label class="cursor-pointer pb-4">Local History</label>
+      <img class="min-h-[8vh]" src="/assets/img/bootstrap-icons-1.7.2/icons/clock-history.svg">
+    </a>
+
+    <a class="flex flex-col justify-center items-center border-solid w-1/2 h-[23.3vh] bg-stone-300 m-4 p-4 rounded-md 
+              md:w-[28.6%] transition ease-in-out delay-150 hover:bg-stone-500 hover:-translate-y-1 hover:scale-110 duration-300" 
+              href="https://vlc.ent.sirsi.net/client/en_US/san" target="_blank">
+      <label class="cursor-pointer pb-4">Search</label>
+      <img class="min-h-[8vh]" src="/assets/img/bootstrap-icons-1.7.2/icons/search.svg">
+    </a>
+
+    <a class="flex flex-col justify-center items-center border-solid w-1/2 h-[23.3vh] bg-stone-300 m-4 p-4 rounded-md 
+        md:w-[28.6%] transition ease-in-out delay-150 hover:bg-stone-500 hover:-translate-y-1 hover:scale-110 duration-300"
+      href="https://www.mel.org/welcome" target="_blank">
+      <label class="cursor-pointer pb-4">MeL</label>
+      <img class="min-h-[8vh]" src="/assets/img/mel_logo.png">
+    </a>
+
+    <a class="flex flex-col justify-center items-center border-solid w-1/2 h-[23.3vh] bg-stone-300 m-4 p-4 rounded-md 
+              md:w-[28.6%] transition ease-in-out delay-150 hover:bg-stone-500 hover:-translate-y-1 hover:scale-110 duration-300" 
+              href="" target="_blank">
+      <label class="cursor-pointer pb-4">Local History</label>
+      <img class="min-h-[8vh]" src="/assets/img/bootstrap-icons-1.7.2/icons/clock-history.svg">
+    </a>
+  </div>
+
+  <div class="flex flex-wrap w-full md:w-2/12 md:min-h-[25vh]">
+    <ul id="events-upcoming">
+    </ul>
+  </div>
+
+</div>
+
+<!-- The top and bottom include are required to be used for each page-->
+<% include!("_after_body.stpl"); %>

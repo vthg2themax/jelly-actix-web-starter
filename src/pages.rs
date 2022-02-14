@@ -1,14 +1,15 @@
-use jelly::actix_web::web::{resource, ServiceConfig};
-use jelly::prelude::*;
-use jelly::Result;
+use actix_web::web::{resource, ServiceConfig};
+use std::prelude::*;
+use Result;
 
-pub async fn homepage(request: HttpRequest) -> Result<HttpResponse> {
-    request.render(200, "index.html", {
-        let context = Context::new();
-        context
-    })
-}
+//Add any new pages below
+pub mod index;
+
+//Add any new folders below
+pub mod accounts;
 
 pub fn configure(config: &mut ServiceConfig) {
-    config.service(resource("/").to(homepage));
+    config.service(resource("/").to(index::index));
+
 }
+
