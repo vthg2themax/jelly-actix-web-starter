@@ -13,8 +13,8 @@ use black_marlin::TemplateOnce;
 // }
 
 
-//#[get("/")]
-pub async fn index(req: HttpRequest) -> HttpResponse {
+#[get("/")]
+pub async fn index() -> impl Responder {
     
     let ctx = SiteTemplate {
         messages: vec![String::from("foo"), String::from("bar")],

@@ -1,8 +1,8 @@
 //! Your Service Description here, etc.
 //use actix_web::actix_rt;
 use actix_web;
-use utility::prelude;
-use std::io;
+//use utility::prelude;
+//use std::io;
 use std::env;
 
 use actix_session::CookieSession;
@@ -39,6 +39,11 @@ async fn stop(stopper: web::Data<mpsc::Sender<()>>) -> HttpResponse {
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     std::env::set_var("RUST_LOG", "actix_server=debug,actix_web=debug");
+
+    let addr = "127.0.0.1:5000";    
+    let path = std::env::current_dir().unwrap();
+
+    println!("Listening for requests at http://{addr} from path: {path}", addr=addr, path=path.display());
     //env_logger::init();
 
     // create a channel
@@ -98,18 +103,20 @@ async fn main() -> std::io::Result<()> {
             .wrap(session_storage)
             // Depending on your CORS needs, you may opt to change this
             // block. Up to you.
-            .default_service(
-                web::resource("")
-                    .route(web::get().to(request::not_found))
-                    .route(web::head().to(HttpResponse::MethodNotAllowed))
-                    .route(web::delete().to(HttpResponse::MethodNotAllowed))
-                    .route(web::patch().to(HttpResponse::MethodNotAllowed))
-                    .route(web::put().to(HttpResponse::MethodNotAllowed))
-                    .route(web::post().to(HttpResponse::MethodNotAllowed)),
-            )
+            // .default_service(
+            //     web::resource("")
+            //         .route(web::get().to(request::not_found))
+            //         .route(web::head().to(HttpResponse::MethodNotAllowed))
+            //         .route(web::delete().to(HttpResponse::MethodNotAllowed))
+            //         .route(web::patch().to(HttpResponse::MethodNotAllowed))
+            //         .route(web::put().to(HttpResponse::MethodNotAllowed))
+            //         .route(web::post().to(HttpResponse::MethodNotAllowed)),
+            // )
+            .configure(pages::config)
             .configure(disable_serving_assets::assets_handler)
             .service(hello)
             .service(stop);
+
 
         //let storage = Storage::new();
         //let queue = create_server(storage);
