@@ -1,0 +1,6 @@
+template_dir: "src/pages"
+escape: true
+delimiter: "%"
+
+optimization:
+    rm_whitespace: false

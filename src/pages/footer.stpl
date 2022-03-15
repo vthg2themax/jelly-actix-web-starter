@@ -1,0 +1,51 @@
+<footer class="border-t border-solid pt-2">
+    <div class="flex flex-row w-4/5 flex-wrap mx-auto md:flex-nowrap md:w-auto md:mx-0">
+      <div class="flex-column w-full md:w-1/2">
+        <h6 class="text-lg font-bold">
+          Contact
+        </h6>
+        <div class="">
+          <p class="" style="white-space:pre-wrap;">55 East Sanilac Avenue<br>Sandusky, MI 48471<br>email: <a href="mailto:library@sandusky.lib.mi.us" target="_blank">library@sandusky.lib.mi.us</a><br>phone: 810.648.2644<br>fax: 810.648.1904</p>
+        </div>
+      </div>
+      <div class="w-full md:w-1/2">
+        <div class="row">
+          <h6 class="text-lg font-bold">Social Media</h6>
+        </div>
+        <ul class="inline-block md:flex md:items-center">
+          <li class="pr-4">
+            <a href="https://www.facebook.com/sanduskydistrictlibrary/ " target="_blank" 
+                                                                         alt="facebook" aria-label="Facebook">
+              <img class="inline-block" src="/assets/img/bootstrap-icons-1.7.2/icons/facebook.svg">
+            </a>
+          </li>
+          <li class="pr-4">
+            <a href="https://www.instagram.com/sanduskydistrictlibrary/?hl=en" target="_blank" 
+                                                                               alt="Instagram" aria-label="Instagram">
+              <img class="inline-block" src="/assets/img/bootstrap-icons-1.7.2/icons/instagram.svg">
+            </a>
+          </li>
+          <li class="pr-4">
+            <a href="https://www.youtube.com/channel/UCI3VbhpyuAs5noSaJn09-6A" target="_blank" 
+                                                                               alt="YouTube" aria-label="YouTube">
+              <img class="inline-block" src="/assets/img/bootstrap-icons-1.7.2/icons/youtube.svg">
+            </a>
+          </li>
+          <li class="pr-4">
+            <a href="https://vm.tiktok.com/ZMJA9McLB/" target="_blank" alt="TikTok" aria-label="URL">
+              <img class="inline-block" src="/assets/img/bootstrap-icons-1.7.2/icons/tiktok.svg">
+            </a>
+          </li>
+          <li class="pr-4">
+            <a href="https://lib.us17.list-manage.com/subscribe?u=e7d768c01f8fac53cbbf6c889&id=e5e835aa91"
+            class="text-lg font-bold text-gray-700 hover:text-stone-900 btn btn-primary" target="_blank">
+              <img class="inline-block pr-1" src="/assets/img/bootstrap-icons-1.7.2/icons/envelope.svg">Sign Up for our Newsletter!
+            </a>
+          </li>
+        </ul>        
+      </div>
+    </div>
+    
+</footer>
+
+<script type="module" src="/assets/js/site.js"></script>

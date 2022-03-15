@@ -1,12 +1,12 @@
 #[macro_use]
 extern crate lazy_static;
 use dotenv;
-use jelly::tera::Tera;
+use jelly::black_marlin::TemplateOnce;
 use std::env;
 
 // Load templates once for the tests
 lazy_static! {
-    static ref TEMPLATES: Tera = {
+    static ref TEMPLATES: TemplateOnce = {
         dotenv::dotenv().ok();
         let templates_glob = env::var("TEMPLATES_GLOB").expect("TEMPLATES_GLOB not set!");
         let templates = Tera::new(&templates_glob).expect("Unable to compile templates!");

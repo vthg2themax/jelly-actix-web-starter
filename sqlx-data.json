@@ -1,0 +1,297 @@
+{
+  "db": "SQLite",
+  "25e285231c11e52d12aecb879c5d6992ab2a833fbbbc4ddd280e9d0a387873ef": {
+    "query": "\n            SELECT name FROM accounts WHERE email = $1\n        ",
+    "describe": {
+      "columns": [
+        {
+          "name": "name",
+          "ordinal": 0,
+          "type_info": "Text"
+        }
+      ],
+      "parameters": {
+        "Right": 1
+      },
+      "nullable": [
+        false
+      ]
+    }
+  },
+  "36b3a5678d3324728575676ae62cd9b775f0b70caecf7374d8ca6c1f22105e0c": {
+    "query": "\n            SELECT \n                id, name, email, password, profile, plan,\n                is_active, is_admin, has_verified_email,\n                last_login_datetime, created_datetime, updated_datetime\n            FROM accounts WHERE email = $1\n        ",
+    "describe": {
+      "columns": [
+        {
+          "name": "id",
+          "ordinal": 0,
+          "type_info": "Int64"
+        },
+        {
+          "name": "name",
+          "ordinal": 1,
+          "type_info": "Text"
+        },
+        {
+          "name": "email",
+          "ordinal": 2,
+          "type_info": "Text"
+        },
+        {
+          "name": "password",
+          "ordinal": 3,
+          "type_info": "Text"
+        },
+        {
+          "name": "profile",
+          "ordinal": 4,
+          "type_info": "Text"
+        },
+        {
+          "name": "plan",
+          "ordinal": 5,
+          "type_info": "Int64"
+        },
+        {
+          "name": "is_active",
+          "ordinal": 6,
+          "type_info": "Int64"
+        },
+        {
+          "name": "is_admin",
+          "ordinal": 7,
+          "type_info": "Int64"
+        },
+        {
+          "name": "has_verified_email",
+          "ordinal": 8,
+          "type_info": "Int64"
+        },
+        {
+          "name": "last_login_datetime",
+          "ordinal": 9,
+          "type_info": "Text"
+        },
+        {
+          "name": "created_datetime",
+          "ordinal": 10,
+          "type_info": "Text"
+        },
+        {
+          "name": "updated_datetime",
+          "ordinal": 11,
+          "type_info": "Text"
+        }
+      ],
+      "parameters": {
+        "Right": 1
+      },
+      "nullable": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false
+      ]
+    }
+  },
+  "4cc3fd8f612385c0ef0c6f55538eb69cc92e4a9c19756709e3c2f14954342d70": {
+    "query": "\n            UPDATE accounts\n            SET has_verified_email = true, last_login_datetime = datetime()\n            WHERE id = $1\n        ",
+    "describe": {
+      "columns": [],
+      "parameters": {
+        "Right": 1
+      },
+      "nullable": []
+    }
+  },
+  "5e861d8c30c2f46888eade56377109f95985c26befc9b12173cedbf8330fb210": {
+    "query": "\n            SELECT\n                id, name, password, is_admin\n            FROM accounts WHERE email = $1\n        ",
+    "describe": {
+      "columns": [
+        {
+          "name": "id",
+          "ordinal": 0,
+          "type_info": "Int64"
+        },
+        {
+          "name": "name",
+          "ordinal": 1,
+          "type_info": "Text"
+        },
+        {
+          "name": "password",
+          "ordinal": 2,
+          "type_info": "Text"
+        },
+        {
+          "name": "is_admin",
+          "ordinal": 3,
+          "type_info": "Int64"
+        }
+      ],
+      "parameters": {
+        "Right": 1
+      },
+      "nullable": [
+        false,
+        false,
+        false,
+        false
+      ]
+    }
+  },
+  "6cdbf8c2a8b47e4a06c609ab9f5c49dec828e483ba0f4ea337754742a06d5d32": {
+    "query": "\n            SELECT\n                id, name, email, password, profile, plan,\n                is_active, is_admin, has_verified_email,\n                last_login_datetime, created_datetime, updated_datetime\n            FROM accounts WHERE id = $1\n        ",
+    "describe": {
+      "columns": [
+        {
+          "name": "id",
+          "ordinal": 0,
+          "type_info": "Int64"
+        },
+        {
+          "name": "name",
+          "ordinal": 1,
+          "type_info": "Text"
+        },
+        {
+          "name": "email",
+          "ordinal": 2,
+          "type_info": "Text"
+        },
+        {
+          "name": "password",
+          "ordinal": 3,
+          "type_info": "Text"
+        },
+        {
+          "name": "profile",
+          "ordinal": 4,
+          "type_info": "Text"
+        },
+        {
+          "name": "plan",
+          "ordinal": 5,
+          "type_info": "Int64"
+        },
+        {
+          "name": "is_active",
+          "ordinal": 6,
+          "type_info": "Int64"
+        },
+        {
+          "name": "is_admin",
+          "ordinal": 7,
+          "type_info": "Int64"
+        },
+        {
+          "name": "has_verified_email",
+          "ordinal": 8,
+          "type_info": "Int64"
+        },
+        {
+          "name": "last_login_datetime",
+          "ordinal": 9,
+          "type_info": "Text"
+        },
+        {
+          "name": "created_datetime",
+          "ordinal": 10,
+          "type_info": "Text"
+        },
+        {
+          "name": "updated_datetime",
+          "ordinal": 11,
+          "type_info": "Text"
+        }
+      ],
+      "parameters": {
+        "Right": 1
+      },
+      "nullable": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false
+      ]
+    }
+  },
+  "765e290a1e51d167fc6fd9252a77da049ec8f9992f1d364d0951f4761ad55455": {
+    "query": "\n            SELECT\n                name, email\n            FROM accounts WHERE id = $1\n        ",
+    "describe": {
+      "columns": [
+        {
+          "name": "name",
+          "ordinal": 0,
+          "type_info": "Text"
+        },
+        {
+          "name": "email",
+          "ordinal": 1,
+          "type_info": "Text"
+        }
+      ],
+      "parameters": {
+        "Right": 1
+      },
+      "nullable": [
+        false,
+        false
+      ]
+    }
+  },
+  "871d7f02668e332b3eb5bfc5ef98073b6839f0e9f749cbeac1f2c665e1e4d62a": {
+    "query": "\n            INSERT INTO accounts (name, email, password) \n            VALUES ($1, $2, $3)\n            RETURNING id\n        ",
+    "describe": {
+      "columns": [
+        {
+          "name": "id",
+          "ordinal": 0,
+          "type_info": "Int64"
+        }
+      ],
+      "parameters": {
+        "Right": 3
+      },
+      "nullable": [
+        false
+      ]
+    }
+  },
+  "baed4ce37a375d782006e7a52041eb2f5d78acec1df3018dccbfc32505b147b6": {
+    "query": "\n            UPDATE accounts\n            SET password = $2, last_login_datetime = datetime()\n            WHERE id = $1\n        ",
+    "describe": {
+      "columns": [],
+      "parameters": {
+        "Right": 2
+      },
+      "nullable": []
+    }
+  },
+  "c54e0a5b35644434da32c0ef9f63188312c7424b7aef7cb288975cd8f3d60253": {
+    "query": "\n            UPDATE accounts\n            SET last_login_datetime = datetime()\n            WHERE id = $1\n        ",
+    "describe": {
+      "columns": [],
+      "parameters": {
+        "Right": 1
+      },
+      "nullable": []
+    }
+  }
+}

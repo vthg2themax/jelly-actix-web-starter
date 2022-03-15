@@ -54,11 +54,12 @@ the interesting parts.
 - Install `sqlx-cli`, with: 
 
 ```
-cargo install sqlx-cli --no-default-features --features postgres
+cargo install sqlx-cli
 ```
-
+- Run the database creation tool `sqlx database create`.
 - Edit `.env.example` to use your settings.
 - Run the account migrations with `sqlx migrate run`.
+
 - Run the server:
 
 ```

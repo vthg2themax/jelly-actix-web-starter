@@ -1,28 +1,18 @@
--- Creates a accounts table, along with some associated helpers.
+-- Creates a accounts table, along with a helpful index.
 
-create or replace function update_timestamp() returns trigger as $$
-begin
-    new.updated = now();
-    return new;
-end;
-$$ language 'plpgsql';
+CREATE TABLE IF NOT EXISTS accounts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    name TEXT NOT NULL,
+    email TEXT NOT NULL UNIQUE,
+    password TEXT NOT NULL,
+    profile TEXT NOT NULL DEFAULT '{}',
+    plan INTEGER NOT NULL DEFAULT 0,
+    is_active INTEGER NOT NULL DEFAULT 0,
+    is_admin INTEGER NOT NULL DEFAULT 0,
+    has_verified_email INTEGER NOT NULL DEFAULT 0,
+    last_login_datetime TEXT,
+    created_datetime TEXT NOT NULL,
+    updated_datetime TEXT NOT NULL
+) STRICT;
 
-create table if not exists accounts (
-    id serial primary key,
-    name text not null,
-    email text not null unique,
-    password text not null,
-    profile jsonb not null default '{}',
-    plan integer not null default 0,
-    is_active boolean not null default true,
-    is_admin boolean not null default false,
-    has_verified_email boolean not null default false,
-    last_login timestamp with time zone,
-    created timestamp with time zone not null default now(),
-    updated timestamp with time zone not null default now()
-);
-
-create unique index accounts_unique_lower_email_idx on accounts (lower(email));
-
-create trigger user_updated before insert or update on accounts
-for each row execute procedure update_timestamp();
+CREATE UNIQUE INDEX IF NOT EXISTS accounts_unique_lower_email_idx ON accounts (lower(email));
