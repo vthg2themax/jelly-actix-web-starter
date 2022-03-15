@@ -1,17 +1,29 @@
 use std::env;
+<<<<<<< HEAD
 use std::fs;
 //use std::fs::File;
 //use std::io::Write;
 use std::path::{Path, PathBuf};
+=======
+//use std::fs::File;
+//use std::io::Write;
+//use std::path::Path;
+>>>>>>> trunk
 use std::process::Command;
 use std::process::Stdio;
 
 fn main() {
+<<<<<<< HEAD
     
 
     let _out_dir = env::var("OUT_DIR").unwrap();
     
     let output = if cfg!(target_os = "windows") {
+=======
+    let _out_dir = env::var("OUT_DIR").unwrap();
+    
+    let _output = if cfg!(target_os = "windows") {
+>>>>>>> trunk
         Command::new("cmd")
                 .args(["/C", "echo hello"])
                 .output()
@@ -24,6 +36,7 @@ fn main() {
                 .expect("failed to execute process")
     };
 
+<<<<<<< HEAD
     println!("cargo:warning=output ran with status: '{:?}'", String::from_utf8(output.stdout).unwrap());
     if cfg!(target_os = "windows") {
         println!("cargo:warning=You ran this on Windows");
@@ -31,6 +44,8 @@ fn main() {
         println!("cargo:warning=You ran this on something not Windows. Thanks!");
     };
 
+=======
+>>>>>>> trunk
     //Minify the CSS with the tailwindcss tool
     let tailwindcss_status =
         Command::new("./tailwindcss-linux-x64")
@@ -42,6 +57,7 @@ fn main() {
     
     println!("cargo:warning=tailwindcss-linux-x64 ran with status: '{:?}'", tailwindcss_status=tailwindcss_status);
 
+<<<<<<< HEAD
     //Get the current directory
     let current_dir = String::from(
                         format!("{}",
@@ -96,6 +112,8 @@ fn main() {
     //now use the release version to minify the src files
 
 
+=======
+>>>>>>> trunk
     //copy the images over
     let _img_directory_mkdir_status =
         Command::new("mkdir")
